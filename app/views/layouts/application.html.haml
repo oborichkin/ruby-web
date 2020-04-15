@@ -9,4 +9,6 @@
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
     = favicon_link_tag "favicon.ico"
   %body
+    = render 'shared/header'
     = yield
+    = render 'shared/footer'
