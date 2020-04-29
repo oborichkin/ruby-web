@@ -18,6 +18,4 @@ test:
  password: <%= Rails.application.secrets[:database][:password] %>
 
 production:
- <<: *default
- database: experteese-prod
- password: <%= ENV['EXPERTEESE_DATABASE_PASSWORD'] %>
+ url: <%= ENV['DATABASE_URL'] %>
