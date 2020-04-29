@@ -54,6 +54,10 @@ group :test do
   gem 'webdrivers'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
 gem "haml-rails", "~> 2.0"
 gem 'jquery-ui-rails'
 gem 'rails-asset-jqueryui'

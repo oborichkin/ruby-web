@@ -20,4 +20,4 @@ test:
 production:
  <<: *default
  database: experteese-prod
- password: <%= ENV['DB_PASSWORD'] %>
+ password: <%= ENV['EXPERTEESE_DATABASE_PASSWORD'] %>
