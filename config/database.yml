@@ -13,6 +13,4 @@ test:
 
 production:
   <<: *default
-  database: experteese-prod
-  username: experteese-admin
-  password: <%= ENV['EXPERTEESE_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
