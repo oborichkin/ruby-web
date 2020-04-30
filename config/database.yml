@@ -1,21 +1,18 @@
 default: &default
-  host: localhost
   adapter: postgresql
-  encoding: UTF8
-  username: postgres
-  timeout: 5000
-  reaping_frequency: 30
+  encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
- <<: *default
- database: experteese-dev
- password: <%= Rails.application.secrets[:database][:password] %>
+  <<: *default
+  database: experteese-dev
 
 test:
- <<: *default
- database: experteese-test
- password: <%= Rails.application.secrets[:database][:password] %>
+  <<: *default
+  database: experteese-test
 
 production:
- url: <%= ENV['DATABASE_URL'] %>
+  <<: *default
+  database: experteese-prod
+  username: experteese-admin
+  password: <%= ENV['EXPERTEESE_DATABASE_PASSWORD'] %>
