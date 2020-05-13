@@ -1,0 +1,18 @@
+ru:
+
+  shared:
+    header:
+      home: "Главная"
+      contacts: "Контакты"
+      help: "Помощь"
+      about: "О нас"
+
+  main:
+    index:
+      app_name: "Experteeze"
+      app_desc: "Приложение для экспертов"
+      dive_in: "Начать"
+
+  themes:
+    index:
+      themes: "Темы"

@@ -1,4 +1,4 @@
-%h1.cover-heading Experteeze
-%p.lead App for experts
+%h1.cover-heading= t('.app_name')
+%p.lead= t('.app_desc')
 %p.lead
-    =link_to 'Dive In', main_index_path, class: "btn btn-lg btn-secondary"
+    =link_to t('.dive_in'), themes_path, class: "btn btn-lg btn-secondary"
