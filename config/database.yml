@@ -6,12 +6,10 @@ default: &default
 development:
   <<: *default
   database: experteese-dev
-  password: <%= Rails.application.secrets[:database][:password] %>
 
 test:
   <<: *default
   database: experteese-test
-  password: <%= Rails.application.secrets[:database][:password] %>
 
 production:
   <<: *default
