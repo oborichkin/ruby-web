@@ -1,23 +1,7 @@
-%h1 Listing themes
+%h1 Themes
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th Qty items
-      %th
-      %th
-      %th
 
-  %tbody
-    - @themes.each do |theme|
-      %tr
-        %td= theme.name
-        %td= theme.qty_items
-        %td= link_to 'Show', theme
-        %td= link_to 'Edit', edit_theme_path(theme)
-        %td= link_to 'Destroy', theme, method: :delete, data: { confirm: 'Are you sure?' }
+- @themes.each do |theme|
+  .list-group
+    %p= link_to theme.name, theme, class: "list-group-item"
 
-%br
-
-= link_to 'New Theme', new_theme_path

@@ -1,12 +1,7 @@
-%p#notice= notice
-
-%p
-  %b Name:
-  = @theme.name
-%p
-  %b Qty items:
-  = @theme.qty_items
-
-= link_to 'Edit', edit_theme_path(@theme)
-\|
-= link_to 'Back', themes_path
+%h1= @theme.name
+.container
+  .grid
+    - @theme.images.each do |image|
+      .cell
+        %a{href: url_for(image)}
+          = image_tag image.file, class: 'responsive-image'
