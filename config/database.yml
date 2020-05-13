@@ -1,23 +1,19 @@
 default: &default
   adapter: postgresql
+  host: localhost
   encoding: UTF8
+  username: postgres
+  timeout: 5000
+  reaping_frequency: 30
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  host: localhost
-  username: postgres
-  timeout: 5000
-  reaping_frequency: 30
   database: experteese-dev
   password: <%= Rails.application.secrets[:database][:password] %>
 
 test:
   <<: *default
-  host: localhost
-  username: postgres
-  timeout: 5000
-  reaping_frequency: 30
   database: experteese-test
   password: <%= Rails.application.secrets[:database][:password] %>
 
