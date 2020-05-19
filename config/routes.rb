@@ -3,10 +3,14 @@ Rails.application.routes.draw do
   resources :images
   resources :values
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
   root 'main#index'
   get 'main/index'
   get 'main/help'
   get 'main/contacts'
   get 'main/about'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  match 'signup', to: 'users#new', via: 'get'
+  match 'signin', to: 'sessions#new', via: 'get'
+  match 'signout', to: 'sessions#destroy', via: 'delete'
 end

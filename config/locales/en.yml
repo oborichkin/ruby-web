@@ -15,3 +15,19 @@ en:
   themes:
     index:
       themes: "Themes"
+
+  sessions:
+    new:
+      sign_in: "Sign In"
+      sign_up: "Sign Up"
+      email: "E-mail"
+      password: "Password"
+      new_user?: "New user?"
+
+  users:
+      form:
+        name: "Name"
+        email: "E-mail"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        create_account: "Create account"

@@ -16,3 +16,19 @@ ru:
   themes:
     index:
       themes: "Темы"
+
+  sessions:
+    new:
+      sign_in: "Войти"
+      sign_up: "Зарегистрироваться"
+      email: "E-mail"
+      password: "Пароль"
+      new_user?: "Новый пользователь?"
+
+  users:
+      form:
+        name: "Имя"
+        email: "E-mail"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        create_account: "Создать мой аккаунт"
