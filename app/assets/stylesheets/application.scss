@@ -12,8 +12,12 @@
 /* Links */
 a,
 a:focus,
+a:visited {
+  color: #222;
+}
+
 a:hover {
-  color: #fff;
+  color: white;
 }
 
 /* Custom default button */
@@ -61,6 +65,15 @@ body {
 /*
  * Header
  */
+.dropdown {
+  position: relative;
+  top: -0.5em;
+}
+
+.gravatar {
+  width: 2em;
+}
+
 .masthead {
   margin-bottom: 2rem;
 }

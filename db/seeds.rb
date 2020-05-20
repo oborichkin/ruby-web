@@ -1,10 +1,3 @@
-user_list = [
-    [ "pavel", "oborin.p@gmail.com" ],
-    [ "admin", "admin@test.org" ],
-    [ "user", "user@test.org" ],
-    [ "guest", "guest@test.org" ]
-]
-
 theme_list = [
     "uncategorized",
     "Best Computer Generated Album Cover",
@@ -34,9 +27,6 @@ image_list = [
 
 User.delete_all
 User.reset_pk_sequence
-user_list.each do |name, email|
-    User.create( name: name, email: email )
-end
 
 Theme.delete_all
 Theme.reset_pk_sequence

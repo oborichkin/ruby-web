@@ -6,17 +6,13 @@
         - @user.errors.full_messages.each do |message|
           %li= message
 
-  .field
-    = f.label t('.name')
-    = f.text_field :name
-  .field
-    = f.label t('.email')
-    = f.text_field :email
-  .field
-    = f.label t('.password')
-    = f.password_field :password
-  .field
-    = f.label t('.password_confirmation')
-    = f.password_field :password_confirmation
-  .actions
+  .form-group
+    = f.text_field :name, class: "form-control", placeholder: t('.name')
+  .form-group
+    = f.text_field :email, class: "form-control", placeholder: t('.email')
+  .form-group
+    = f.password_field :password, class: "form-control", placeholder: t('.password')
+  .form-group
+    = f.password_field :password_confirmation, class: "form-control", placeholder: t('.password_confirmation')
+  .form-group
     = f.submit t('.create_account'), class: "btn btn-large btn-primary"

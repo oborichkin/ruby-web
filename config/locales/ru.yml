@@ -6,6 +6,9 @@ ru:
       contacts: "Контакты"
       help: "Помощь"
       about: "О нас"
+      sign_in: "Вход"
+      sign_out: "Выход"
+      profile: "Профиль"
 
   main:
     index:

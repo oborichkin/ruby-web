@@ -5,6 +5,9 @@ en:
       contacts: "Contacts"
       help: "Help"
       about: "About"
+      sign_in: "Sign In"
+      sign_out: "Sign Out"
+      profile: "Profile"
 
   main:
     index:
