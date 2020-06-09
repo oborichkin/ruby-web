@@ -10,6 +10,9 @@ class ThemesController < ApplicationController
   # GET /themes/1
   # GET /themes/1.json
   def show
+    @comment = Comment.new
+    @comment.user_id = current_user.id
+    @comment.theme_id = @theme.id
   end
 
   # GET /themes/new

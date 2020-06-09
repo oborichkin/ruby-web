@@ -5,3 +5,9 @@
       .cell
         %a{href: url_for(image)}
           = image_tag image.file, class: 'responsive-image'
+
+.comments-container
+  - @theme.comments.each do |comment|
+    = p comment.text
+
+= render 'comments/form'
