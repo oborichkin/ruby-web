@@ -5,7 +5,7 @@ rvm:
   - 2.5.1
 before_install:
   - bundle install
-  - psql -c 'create database experteese-test;' -U postgres
+  - psql -c 'create database experteese_test;' -U postgres
 before_script:
   - bundle exec rake db:drop
   - bundle exec rake db:setup

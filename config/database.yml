@@ -14,7 +14,7 @@ development:
 
 test:
   <<: *default
-  database: experteese-test
+  database: experteese_test
   password: postgres
 
 production:
