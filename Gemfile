@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'active_model_serializers'
+gem "faker"
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -35,7 +36,6 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]# Лучше отображает ошибки
   gem "better_errors"
   gem "binding_of_caller"
-  gem "faker"
 end
 
 group :development do
