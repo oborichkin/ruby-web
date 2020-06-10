@@ -15,14 +15,6 @@ class ValuesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should create value" do
-    assert_difference('Value.count') do
-      post values_url, params: { value: { image_id: @value.image_id, user_id: @value.user_id, value: @value.value } }
-    end
-
-    assert_redirected_to value_url(Value.last)
-  end
-
   test "should show value" do
     get value_url(@value)
     assert_response :success
@@ -31,11 +23,6 @@ class ValuesControllerTest < ActionDispatch::IntegrationTest
   test "should get edit" do
     get edit_value_url(@value)
     assert_response :success
-  end
-
-  test "should update value" do
-    patch value_url(@value), params: { value: { image_id: @value.image_id, user_id: @value.user_id, value: @value.value } }
-    assert_redirected_to value_url(@value)
   end
 
   test "should destroy value" do

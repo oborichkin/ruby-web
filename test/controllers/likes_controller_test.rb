@@ -15,14 +15,6 @@ class LikesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should create like" do
-    assert_difference('Like.count') do
-      post likes_url, params: { like: { good: @like.good, image_id: @like.image_id, user_id: @like.user_id } }
-    end
-
-    assert_redirected_to like_url(Like.last)
-  end
-
   test "should show like" do
     get like_url(@like)
     assert_response :success
@@ -31,11 +23,6 @@ class LikesControllerTest < ActionDispatch::IntegrationTest
   test "should get edit" do
     get edit_like_url(@like)
     assert_response :success
-  end
-
-  test "should update like" do
-    patch like_url(@like), params: { like: { good: @like.good, image_id: @like.image_id, user_id: @like.user_id } }
-    assert_redirected_to like_url(@like)
   end
 
   test "should destroy like" do
