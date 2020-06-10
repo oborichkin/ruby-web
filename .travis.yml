@@ -4,10 +4,8 @@ services:
 rvm:
   - 2.5.1
 before_install:
-  - bundle install
   - psql -c 'create database experteese_test;' -U postgres
-before_script:
+script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
-script: 
-  - bundle exec rails test
+  - bundle exec rake test
