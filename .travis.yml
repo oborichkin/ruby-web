@@ -7,8 +7,7 @@ before_install:
   - bundle install
   - psql -c 'create database experteese_test;' -U postgres
 before_script:
-  - bundle exec rake db:drop
-  - bundle exec rake db:setup
-  - bundle exec rake db:migrate
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
 script: 
   - bundle exec rails test
