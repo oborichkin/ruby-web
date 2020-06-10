@@ -7,7 +7,13 @@
           = image_tag image.file, class: 'responsive-image'
 
 .comments-container
-  - @theme.comments.each do |comment|
-    = p comment.text
+  .comments-grid
+    - @theme.comments.each do |comment|
+      .comments-cell
+        .comment-author
+          = gravatar_for comment.user
+        = comment.text
 
-= render 'comments/form'
+.new-comment-form
+  - if current_user
+    = render 'comments/form'

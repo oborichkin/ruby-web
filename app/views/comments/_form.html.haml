@@ -6,10 +6,9 @@
         - @comment.errors.full_messages.each do |message|
           %li= message
 
-  .field
-    = f.label :text
-    = f.text_field :text
-  .field
+  .form-group
+    = f.text_field :text, class: "form-control new-comment-field", placeholder: t('.new_comment')
+  .form-group
     = f.hidden_field :theme_id
-  .actions
-    = f.submit 'Save'
+  .form-group
+    = f.submit t('.post_comment'), class: "btn btn-large btn-primary"

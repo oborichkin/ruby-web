@@ -35,3 +35,8 @@ ru:
         password: "Пароль"
         password_confirmation: "Подтверждение пароля"
         create_account: "Создать мой аккаунт"
+
+  comments:
+    form:
+      new_comment: "Новый комментарий..."
+      post_comment: "Отправить"
