@@ -36,3 +36,4 @@ yarn-debug.log*
 .yarn-integrity
 
 secrets.yml
+coverage
