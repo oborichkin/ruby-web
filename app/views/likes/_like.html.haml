@@ -1,0 +1,7 @@
+= form_for @like do |f|
+
+  .field
+    = f.label :image_id
+    = f.number_field :image_id, value: 1
+  .actions
+    = f.submit 'Save'

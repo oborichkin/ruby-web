@@ -10,6 +10,12 @@ class ThemesController < ApplicationController
   # GET /themes/1
   # GET /themes/1.json
   def show
+    @like = Like.new
+    @like.good = true
+
+    @dislike = Like.new
+    @dislike.good = false
+
     @comment = Comment.new
     @comment.theme_id = @theme.id
   end

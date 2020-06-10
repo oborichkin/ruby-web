@@ -1,2 +1,7 @@
-.container 
+.container
+  %h1
+    = @image.name
   = image_tag @image.file, class: ''
+  %p.image-rating
+    %span ❤️
+    = @image.get_likes

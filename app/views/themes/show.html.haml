@@ -3,8 +3,31 @@
   .grid
     - @theme.images.each do |image|
       .cell
+
         %a{href: url_for(image)}
           = image_tag image.file, class: 'responsive-image'
+
+        .rating-controls
+          - if current_user
+            = form_for @like do |f|
+              .like-field
+                = f.hidden_field :image_id, value: image.id
+              .hidden-field
+                = f.check_box :good
+              .like-action
+                = f.submit '👍'
+
+          .rating
+            = image.get_likes
+
+          - if current_user
+            = form_for @dislike do |f|
+              .like-field
+                = f.hidden_field :image_id, value: image.id
+              .hidden-field
+                = f.check_box :good
+              .like-action
+                = f.submit '👎'
 
 .comments-container
   .comments-grid

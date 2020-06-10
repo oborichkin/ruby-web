@@ -99,6 +99,8 @@ GEM
     erubi (1.9.0)
     erubis (2.7.0)
     execjs (2.7.0)
+    faker (2.12.0)
+      i18n (>= 1.6, < 2)
     ffi (1.12.2)
     flash (0.0.3)
     font-awesome-rails (4.7.0.5)
@@ -265,6 +267,7 @@ GEM
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
+    will_paginate (3.1.8)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.3.0)
@@ -282,6 +285,7 @@ DEPENDENCIES
   bootstrap-sass (= 3.4.1)
   byebug
   capybara (>= 2.15)
+  faker
   flash
   font-awesome-rails (~> 4.6, >= 4.6.3.1)
   font-awesome-sass
@@ -303,6 +307,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
   webdrivers
   webpacker (~> 4.0)
+  will_paginate (~> 3.1.0)
 
 RUBY VERSION
    ruby 2.5.1p57

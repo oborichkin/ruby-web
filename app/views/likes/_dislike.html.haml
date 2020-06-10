@@ -1,0 +1,13 @@
+= form_for @dislike do |f|
+
+  .field
+    = f.label :good
+    = f.check_box :good
+  .field
+    = f.label :image_id
+    = f.number_field :image_id
+  .field
+    = f.label :user_id
+    = f.number_field :user_id
+  .actions
+    = f.submit 'Save'
