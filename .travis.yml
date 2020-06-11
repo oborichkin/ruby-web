@@ -4,6 +4,7 @@ services:
 rvm:
   - 2.5.1
 before_install:
+  - cp config/database.yml.travis config/database.yml
   - psql -c 'create database experteese_test;' -U postgres
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace

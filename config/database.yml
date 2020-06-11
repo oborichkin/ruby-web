@@ -13,9 +13,9 @@ development:
   password: postgres
 
 test:
-  adapter: postgresql
-  username: postgres
-  database: experteese_test
+  <<: *default
+  password: postgres
+  database: experteese-test
 
 production:
   <<: *default
